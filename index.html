@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dwarf Colour Studio</title>
+  <meta name="theme-color" content="#0f1410">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <section id="splash" class="screen splash active">
+      <div class="splash-card">
+        <div class="spellbook-emblem"><img src="assets/ui/spellbook.png" alt=""></div>
+        <h1>Dwarf Colour Studio</h1>
+        <p>Create coloured dwarf portraits from layered artwork.</p>
+        <button id="startButton" class="primary-button icon-button"><img src="assets/ui/spellbook.png" alt=""> Open the Studio</button>
+      </div>
+    </section>
+
+    <section id="gallery" class="screen gallery">
+      <header class="topbar">
+        <div>
+          <h1>Choose a portrait</h1>
+          <p>Select a base image to customise.</p>
+        </div>
+      </header>
+      <div id="portraitGrid" class="portrait-grid"></div>
+    </section>
+
+    <section id="editor" class="screen editor">
+      <header class="editor-header">
+        <button id="backButton" class="ghost-button icon-button"><img src="assets/ui/back.png" alt=""> Portraits</button>
+        <div class="editor-title-block">
+          <h1 id="editorTitle">Editor</h1>
+          <p id="editorSubtitle"></p>
+        </div>
+      </header>
+
+      <main class="editor-layout">
+        <section class="preview-panel">
+          <label class="portrait-name-row">
+            <span>Name:</span>
+            <input id="characterNameInput" type="text" placeholder="Enter character name">
+          </label>
+          <canvas id="portraitCanvas" width="1254" height="1254"></canvas>
+        </section>
+
+        <aside class="control-panel">
+          <div class="actions">
+            <button id="resetButton" class="icon-button"><img src="assets/ui/reset.png" alt=""> Reset</button>
+            <button id="randomButton" class="icon-button"><img src="assets/ui/random.png" alt=""> Random</button>
+            <button id="ultraRandomButton" class="icon-button"><img src="assets/ui/ultra-random.png" alt=""> Random+</button>
+            <button id="downloadButton" class="primary-button icon-button"><img src="assets/ui/download.png" alt=""> Download</button>
+          </div>
+          <div id="colourControls" class="colour-controls"></div>
+        </aside>
+      </main>
+    </section>
+  </div>
+
+  <script src="app-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
